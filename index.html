@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <meta name='viewport'
+      content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <title>Save A Life</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel='stylesheet' href='styles.css'/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+
+      function displayNext() {
+        x = (x === elements.length - 1) ? 0 : x + 1;
+        if (x === 0) {
+          document.getElementById(elements[elements.length - 1]).classList.add("hidden");
+        }
+        else {
+          document.getElementById(elements[x - 1]).classList.add("hidden");
+        }
+        document.getElementById(elements[x]).classList.remove("hidden");
+      }
+
+      function displayPrevious() {
+        x = (x <= 0) ? elements.length - 1 : x - 1;
+        if (x === elements.length - 1) {
+          document.getElementById(elements[0]).classList.add("hidden");
+        }
+        else {
+          document.getElementById(elements[x + 1]).classList.add("hidden");
+        }
+        document.getElementById(elements[x]).classList.remove("hidden");
+      }
+
+      function startTimer() {
+        setInterval(displayNext, 10000);
+      }
+
+      var elements = [], x = -1;
+      elements[0] = "mainscroll1";
+      elements[1] = "mainscroll2";
+      elements[2] = "mainscroll3";
+      elements[3] = "mainscroll4";
+    </script>
+  </head>
+  <body onload=startTimer()>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">Save A Life</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="adopt.html">Adopt</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="donate.html">Donate</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                  </li>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <div class='page'>
+
+      <div id="mainscroll1" class="mainscroll">
+        <img class="scrollphoto" src="/photos/pup.jpg"/>
+        <div class="scrolldetails">
+          <div class="scrolltextarea">
+            <h1 class="scrolltext">Adopt a dog</h1>
+            <p class="scrolltext">Take a few minutes online to read about our available dogs and then schedule an appointment to meet them in person!</p>
+            <p class="scrolltext"><a href="?">read more</a></p>
+          </div>
+        </div>
+      </div>
+      <div id="mainscroll2" class="mainscroll hidden">
+        <img class="factbackground" src="/photos/trees.jpg"/>
+        <div class="factdetails">
+          <div class="facttextarea">
+            <h1 class="facttext">Fun Dog Fact</h1>
+            <p id="test" class="facttext">The dog was frequently depicted in Greek art, including Cerberus, the three-headed hound guarding the entrance to the underworld, and the hunting dogs which accompanied the virgin goddess of the chase, Diana.</p>
+          </div>
+        </div>
+      </div>
+      <div id="mainscroll3" class="mainscroll hidden">
+        <img class="scrollphoto" src="/photos/maincat.jpg"/>
+        <div class="scrolldetails">
+          <div class="scrolltextarea">
+            <h1 class="scrolltext">Adopt a cat</h1>
+            <p class="scrolltext">Take a few minutes online to read about our available cats and then schedule an appointment to meet them in person!</p>
+            <p class="scrolltext"><a href="?">read more</a></p>
+          </div>
+        </div>
+      </div>
+      <div id="mainscroll4" class="mainscroll hidden">
+        <img class="factbackground" src="/photos/trees.jpg"/>
+        <div class="factdetails">
+          <div class="facttextarea">
+            <h1 class="facttext">Fun Dog Fact</h1>
+            <p class="facttext">During the Middle Ages, Great Danes and Mastiffs were sometimes suited with armor and spiked collars to enter a battle or to defend supply caravans.</p>
+          </div>
+        </div>
+      </div>
+    
+      <img src="/photos/whitearrowl.png" class="arrowl" onclick="displayPrevious()">
+      <img src="/photos/whitearrowr.png" class="arrowr" onclick="displayNext()">
+
+      <div class="directtop">
+        <div class="direct direct-1">
+          <p class="directtext">FIND YOUR PERFECT PET</p>
+          <h3 class="directtext"><strong><a href="adopt.html" style="color: #ffffff;">Adopt</a></strong></h3>
+        </div>
+        <div class="direct direct-2">
+          <p class="directtext">SUPPORT THE CAUSE</p>
+          <h3 class="directtext"><strong><a href="donate.html" style="color: #ffffff;">Donate</a></strong></h3>
+        </div>
+        <div class="direct direct-3">
+          <p class="directtext">HAVE QUESTIONS?</p>
+          <h3 class="directtext"><strong><a href="contact.html" style="color: #ffffff;">Contact Us</a></strong></h3>
+        </div>
+      </div>
+
+      <div class="spacer">
+        <h1>Recent Articles:</h1>
+      </div>
+      <div class="articletop">
+        <div class="article">
+          <img src="/photos/puppuccino.jpg" class="articlephoto">
+          <div class="articledesc">
+            <p class="articletext"><a href="?">How Healthy is a Puppuccino?</a></p>
+          </div>
+        </div>
+        <div class="article">
+          <img src="/photos/wash.jpg" class="articlephoto">
+          <div class="articledesc">
+            <p class="articletext"><a href="?">The best way to give a bath.</a></p>
+          </div>
+        </div>
+      </div>
+    <div class="articletop">
+      <div class="article">
+        <img src="/photos/stray.jpg" class="articlephoto">
+        <div class="articledesc">
+          <p class="articletext"><a href="?">What to do when you find a stray.</a></p>
+        </div>
+      </div>
+      <div class="article">
+        <img src="/photos/kittens.jpg" class="articlephoto">
+        <div class="articledesc">
+          <p class="articletext"><a href="?">How has the Covid-19 pandemic affected homeless pets?</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p><p>https://github.com/Changus1/creativelab2.git</p></p>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <meta name='viewport'
+      content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <title>Save A Life</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel='stylesheet' href='styles.css'/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+      function generateAnimals() {
+          createCats(6);
+          createDogs(6);
+      }
+      function createCats(amount) {
+          for (var i = 0; i < amount; i++) {
+              const url = "https://aws.random.cat/meow";
+              fetch(url)
+                  .then(function (response) {
+                      return response.json();
+                  }).then(function (json) {
+                      var myUrl = json.file;
+                      if (json.file.includes(".mp4") === true || json.file.includes(".gif") === true) {
+                          myUrl = "../photos/noimage.png";
+                      }
+                      var age = Math.floor(Math.random()*12) + 1;
+                      var gender = (flipCoin() === "even") ? "Female" : "Male";
+                      var units = (flipCoin() === "even") ? "Months" : "Years";
+                      let results = "";
+                      results += "<div class='catalog'>";
+                      results += "<img src=" + myUrl + " class='catapic'>";
+                      results += "<p class='catalogitem'>Name: " + getName(gender) + "</p>";
+                      results += "<p class='catalogitem'>Age: " + age + " " + units + "</p>";
+                      results += "<p class='catalogitem'>Gender: " + gender + "</p>";
+                      results += "</div";
+                      document.getElementById("availableCats").innerHTML += results;
+                  });
+          }
+      }
+      function createDogs(amount) {
+          for (var i = 0; i < amount; i++) {
+              const url = "https://random.dog/woof.json";
+              fetch(url)
+                  .then(function (response) {
+                      return response.json();
+                  }).then(function (json) {
+                      console.log(json);
+                      var myUrl = json.url;
+                      if (json.url.includes(".mp4") === true || json.url.includes(".gif") === true) {
+                          myUrl = "../photos/noimage.png";
+                      }
+                      var age = Math.floor(Math.random()*12) + 1;
+                      var gender = (flipCoin() === "even") ? "Female" : "Male";
+                      var units = (flipCoin() === "even") ? "Months" : "Years";
+                      let results = "";
+                      results += "<div class='catalog'>";
+                      results += "<img src=" + myUrl + " class='catapic'>";
+                      results += "<p class='catalogitem'>Name: " + getName(gender) + "</p>";
+                      results += "<p class='catalogitem'>Age: " + age + " " + units + "</p>";
+                      results += "<p class='catalogitem'>Gender: " + gender + "</p>";
+                      results += "</div";
+                      document.getElementById("availableDogs").innerHTML += results;
+                  });
+          }
+      }
+      function getName(gender) {
+          if (gender === "Male") {
+              var random = Math.floor(Math.random()*20);
+              return boyNames[random];
+          }
+          else {
+              var random = Math.floor(Math.random()*20);
+              return girlNames[random];
+          }
+      }
+      function flipCoin() {
+          var coin = Math.floor(Math.random()*2) + 1;
+          if (coin % 2 == 0) {
+              return "even";
+          }
+          else {
+              return "odd";
+          }
+      }
+      function addBreak(animal) {
+          var addThis = "<div class='break'><div>";
+              document.getElementById("availableCats").innerHTML += addThis;
+      }
+      var girlNames = ["Luna",	"River", "Dolly", "Bella", "Layla",	"Cleo", "Daisy", "Winnie", "Maple", "Lucy",	"Skye",	"Violet", "Bailey",	"Cookie", "Angel", "Nala", "Scout",	"Olive", "Ellie", "Lulu"];
+      var boyNames = ["Max", "Kobe", "Oscar", "Cooper", "Oakley", "Mac", "Charlie", "Rex", "Rudy", "Teddy", "Bailey", "Chip", "Bear", "Cash", "Walter", "Milo", "Jasper", "Blaze", "Bentley", "Bo"];
+    </script>
+  </head>
+
+  <body onload=generateAnimals()>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">Save A Life</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="adopt.html">Adopt</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="donate.html">Donate</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                  </li>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <div class='page'>
+      <img src="/photos/adopt.jpg" class="photo">
+      <h1 class="adoptheading">Adopt</h1>
+
+      <div class="adopttop">
+        <div class="adopt adopt-1">
+          <h3 class="adopttext"><strong>Adoption Process</strong></h3>
+          <p class="adopttext">In order to adopt from this facility, there is an application packet and questionnaire.</p>
+        </div>
+        <div class="adopt adopt-2">
+          <h3 class="adopttext"><strong>Adoption Fees</strong></h3>
+          <p class="adopttext">Dogs: ~$200-$300</p>
+          <p class="adopttext">Cats: ~$100-$150</p>
+        </div>
+        <div class="adopt adopt-3">
+          <h3 class="adopttext"><strong>Post-Adoption</strong></h3>
+          <p class="adopttext">We understand that adoption can be a difficult process for owners and pets. We offer followup consultations and accept all returning animals regardless of time passed.</p>
+        </div>
+      </div>
+
+      <div class="findlinktop">
+        <div class="linkbody">
+          <img src="/photos/cat.jpg" class="pic">
+          <p class="findlinktext"><a href="#cats">Find a cat</a></p>
+        </div>
+        <div class="linkbody">
+          <img src="/photos/gold.jpg" class="pic">
+          <p class="findlinktext"><a href="#dogs">Find a dog</a></p>
+        </div>
+      </div>
+
+      <div class="spacer">
+        <h1>Browse Online or Come In-person For A Visit!</h1>
+      </div>
+      <img src="/photos/pup.jpg" class="spacerpic">
+      
+      <div class="spacer">
+        <h1 id="dogs">Dogs</h1>
+      </div>
+      <div id="availableDogs" class="catalogtop"></div>
+
+      <div class="spacer">
+        <h1 id="cats">Cats</h1>
+      </div>
+      <div id="availableCats" class="catalogtop"></div>
+      
+
+    <div class="footer">
+      <p>https://github.com/Changus1/creativelab2.git</p>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</html>

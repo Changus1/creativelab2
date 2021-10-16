@@ -1,0 +1,556 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+}
+.bg-light {
+    background-color: #4682B4!important;
+}
+.page {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mainscroll {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.scrolldetails {
+    width: 100%;
+    height: 225px;
+    background-color: rgb(85, 85, 85);
+    justify-self: center;
+}
+.scrollphoto {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.scrolltextarea {
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 20px;
+}
+.scrolltext {
+    color: #fff;
+    margin: 5px;
+}
+.factbackground {
+    width: 100%;
+    height: 525px;
+    filter: blur(4px);
+    object-fit: fill;
+}
+.factdetails {
+    position: absolute;
+    opacity: 75%;
+    width: 100%;
+    height: 350px;
+    background-color: #4682B4;
+    justify-self: center;
+}
+.facttextarea {
+    margin-top: 60px;
+    margin-left: 40px;
+    margin-right: 20px;
+}
+.facttext {
+    color: #fff;
+    margin: 5px;
+}
+.hidden {
+    display: none;
+}
+
+
+.directtop {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: #4682B4;
+    margin-bottom: 30px;
+}
+.direct {
+    height: 100px;
+    width: 100%;
+    align-items: center;
+}
+.directtext {
+    margin: 0;
+    padding: 0;  
+}
+.direct-1 {
+    display: flex;
+    flex-direction: column;
+    background-color: #346288;
+    justify-content: center;
+    align-items: center;
+}
+.direct-2 {
+    display: flex;
+    flex-direction: column;
+    background-color: #4682B4;
+    justify-content: center;
+    align-items: center;
+}
+.direct-3 {
+    display: flex;
+    flex-direction: column;
+    background-color: #57a6e7;
+    justify-content: center;
+    align-items: center;
+}
+
+.spacer {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    align-self: center;
+}
+h1 {
+    color: #4682B4;
+}
+
+.articletop {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.article {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 100%;
+    align-items: center;
+}
+.articlephoto {
+    width: 90%;
+    height: 80%;
+    object-fit: cover;
+}
+.articledesc {
+    height: 20%;
+    width: 80%;
+}
+.articletext {
+    color: #4682B4;
+    font-size: 18px;
+}
+
+.footer{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: #4682B4;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    position: relative;
+}
+.heading {
+    position: absolute;
+    top: 160px;
+    left: 20px;
+    font-size: 48px;
+}
+.adoptheading {
+    position: absolute;
+    top: 160px;
+    left: 225px;
+    font-size: 48px;
+    color: #000;
+    font-weight: bold;
+}
+.donateheading {
+    position: absolute;
+    top: 160px;
+    left: 30px;
+    font-size: 48px;
+    color: #000;
+    font-weight: bold;
+}
+
+.contacttop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contactbox {
+    width: 100%;
+    margin: 10px;
+}
+.contacttext {
+    color: #4682B4;
+    padding: 0;
+    margin: 0 0 0 20px;
+}
+.map {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-style: solid;
+    border-color: #4682B4;
+}
+.messagesmall {
+    display: flex;
+    height: 35px;
+    width: 100%;
+    margin: 5px;
+}
+.messagebig {
+    display: flex;
+    height: 65px;
+    width: 100%;
+    margin: 5px;
+}
+.box {
+    display: flex;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    border-color: black;
+    margin: 10px;
+}
+.messagetext {
+    color: black;
+    align-self: center;
+    opacity: 60%;
+}
+.sendmessage {
+    display: flex;
+    height: 35px;
+    width: 35%;
+    margin: 5px;
+}
+.sendmessagetext {
+    text-align: center;
+    opacity: 100%;
+    font-weight: bold;
+    color: black;
+}
+
+.adopttop {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: #4682B4;
+    margin-bottom: 30px;
+}
+.adopt {
+    height: 250px;
+    width: 100%;
+    align-items: center;
+}
+.adopttext {
+    margin: 0;
+    padding: 0;
+    text-align: center;   
+}
+.adopt-1 {
+    display: flex;
+    flex-direction: column;
+    background-color: #346288;
+    justify-content: center;
+    align-items: center;
+}
+.adopt-2 {
+    display: flex;
+    flex-direction: column;
+    background-color: #4682B4;
+    justify-content: center;
+    align-items: center;
+}
+.adopt-3 {
+    display: flex;
+    flex-direction: column;
+    background-color: #57a6e7;
+    justify-content: center;
+    align-items: center;
+}
+
+.findlinktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+.linkbody {
+    width: 100%;
+    height: 300px;
+}
+.pic {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+.findlinktext {
+    color: #57a6e7;
+    text-align: center;
+}
+
+.spacerpic {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+.catalogtop {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.catalog {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 100%;
+    align-items: center;
+}
+.catalogitem {
+    margin: 0;
+    padding: 0;
+    color: #4682B4;
+}
+.catapic {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-color: #4682B4;
+    border-style: solid;
+    border-radius: 25px;
+}
+
+.donationdesc {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.donationtext {
+    text-align: center;
+    color: #4682B4;
+}
+.donationbutton {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(255, 193, 78);
+    border-radius: 25px;
+    text-align: center;
+}
+
+.affiliatestop {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+}
+.affiliate {
+    width: 70%;
+    margin: auto auto;
+    height: auto;
+    object-fit: scale-down;
+}
+
+.arrowl {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 350px;
+    left: 45px;
+    opacity: 30%;
+    transition-duration: 1s;
+    transition-property: opacity;
+}
+.arrowl:hover {
+    opacity: 100%;
+}
+
+.arrowr {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 350px;
+    left: 272px;
+    opacity: 30%;
+    transition-duration: 1s;
+    transition-property: opacity;
+}
+.arrowr:hover {
+    opacity: 100%;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+  }
+
+
+@media (min-width: 48em) {
+    .navbar-nav {
+        margin-left: auto!important;
+        margin-right: 0!important;
+    }
+
+    .mainscroll {
+        flex-direction: row;
+    }
+    .scrollphoto {
+        width: 65%;
+        height: 400px;
+    }
+    .scrolldetails {
+        width: 35%;
+        height: 400px;
+    }
+    .factbackground {
+        width: 100%;
+        height: 400px;
+        filter: blur(4px);
+        object-fit: fill;
+    }
+    .facttextarea {
+        margin-top: 80px;
+        margin-left: 300px;
+        margin-right: 300px;
+    }
+
+    .directtop {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .direct {
+        width: 25%;
+    }
+
+    .adopttop {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .adopt {
+        width: 25%;
+    }
+
+    .articletop {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .article {
+        flex-direction: row;
+        height: 150px;
+        margin: 10px 40px;
+    }
+    .articlephoto {
+        width: 45%;
+        height: 100%;
+    }
+    .articledesc {
+        width: 55%;
+        height: 100%;
+        background-color: rgb(134, 194, 243);
+    }
+    .articletext {
+        color: #0167bb;
+        margin: 25px;
+    }
+
+    .heading {
+        top: 160px;
+        left: 200px;
+        font-size: 90px;
+    }
+    .adoptheading {
+        top: 160px;
+        left: 800px;
+        font-size: 90px;
+    }
+    .donateheading {
+        top: 150px;
+        left: 170px;
+        font-size: 90px;
+    }
+
+    .contacttop {
+        flex-direction: row;
+        width: 100%;
+    }
+    .contactbox {
+        width: 50%;
+    }
+    .sendmessage {
+        width: 20%;
+    }
+
+    .findlinktop {
+        flex-direction: row;
+    }
+    .linkbody {
+        width: 50%;
+        height: 300px;
+        margin: 5px;
+    }
+    .findlinktext {
+        font-size: 24px;
+    }
+
+    .catalogtop {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .catalog {
+        height: 300px;
+        width: 20%;
+        align-items: center;
+    }
+    .catapic {
+        width: 95%;
+        height: 70%;
+    }
+
+    .affiliatestop {
+        flex-direction: row;
+    }
+    .affiliate {
+        width: 50%;
+    }
+
+    .donationbutton {
+        margin-top: 20px;
+        width: 50%;
+        align-self: center;
+    }
+
+    .arrowl {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 200px;
+        left: 45px;
+    }   
+    .arrowr {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 200px;
+        left: 1120px;
+    }
+}
